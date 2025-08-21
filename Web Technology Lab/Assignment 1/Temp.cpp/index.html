@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthCare Clinic</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header, nav, section, footer {
+      padding: 20px;
+    }
+    header {
+      background: #0275d8;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    nav {
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0275d8;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 40px;
+    }
+    h2 {
+      color: #0275d8;
+    }
+    .services, .doctors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1 1 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .testimonial {
+      font-style: italic;
+      margin: 10px 0;
+    }
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1em;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #0275d8;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HealthCare Clinic</h1>
+  <p>Your Health, Our Priority</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#doctors">Doctors</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#appointment">Appointment</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Welcome to HealthCare Clinic. We combine expert medical care with a human touch,
+     ensuring you get the best health solutions. With modern facilities and experienced
+     doctors, we’re here for your wellness journey.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>General Consultation</h3>
+      <p>30 mins session</p>
+      <p><strong>$50</strong></p>
+    </div>
+    <div class="card">
+      <h3>Dental Check-up</h3>
+      <p>45 mins session</p>
+      <p><strong>$75</strong></p>
+    </div>
+    <div class="card">
+      <h3>Cardiology Screening</h3>
+      <p>1 hour session</p>
+      <p><strong>$120</strong></p>
+    </div>
+    <div class="card">
+      <h3>Physiotherapy</h3>
+      <p>1 hour session</p>
+      <p><strong>$60</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="doctors">
+  <h2>Meet Our Doctors</h2>
+  <div class="doctors">
+    <div class="card">
+      <h3>Dr. Jadhav</h3>
+      <p>Cardiologist with 10+ years of experience.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Kothari</h3>
+      <p>Dentist specializing in cosmetic dentistry.</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Shelke</h3>
+      <p>Expert physiotherapist focused on sports injuries.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>What Our Patients Say</h2>
+  <p class="testimonial">"The doctors were so attentive and the facilities were top-notch. Highly recommended!"<br>- xyz</p>
+  <p class="testimonial">"Great experience from booking to consultation. Will come back for sure."<br>- abc</p>
+</section>
+
+<section id="appointment">
+  <h2>Book an Appointment</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="datetime-local" placeholder="Preferred Date & Time" required>
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>Contact us: info@healthcare.com | +123 456 7890</p>
+  <p>Facebook | Twitter | Instagram</p>
+  <p>© 2025 HealthCare Clinic. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

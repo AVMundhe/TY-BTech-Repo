@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+   <h3>Enter the First NO. : </h3> <input type="text" id="f">
+    <h3>Enter the Second NO. : </h3> <input type="text" id="s">
+    <br>
+    <br>
+   <button id="add">Add </button>
+   <button id="sub">Subtract </button >
+   <H3 id="result"> </H3>
+   ,
+   <button id="change"> CHange</button>
+   <h3 id="cha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam praesentium excepturi ratione a, inventore dolor maiores recusandae vel. Tempora eius sapiente reprehenderit laborum illum? Laudantium earum sequi facere praesentium ab?</h3>
+    <script>
+        
+        document.getElementById("add").addEventListener("click",function(){
+             let x = document.getElementById("f").value;
+             let y = document.getElementById("s").value;
+             x=parseInt(x);
+             y=parseInt(y);
+             document.getElementById("result").textContent=parseInt(x+y);
+
+        })
+
+          document.getElementById("sub").addEventListener("click",function(){
+             let x = document.getElementById("f").value;
+             let y = document.getElementById("s").value;
+             x=parseInt(x);
+             y=parseInt(y);
+             document.getElementById("result").textContent=parseInt(x-y);
+
+        })
+       
+          document.getElementById("change").addEventListener("click",function(){
+            let c=document.getElementById("cha");
+            if( c.style.display=="none"){}
+            c.style.display="none";
+            
+        })
+      
+    </script>
+</body>
+</html>
