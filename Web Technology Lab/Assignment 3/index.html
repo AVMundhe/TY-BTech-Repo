@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: aqua;
+      padding: 20px;
+    }
+    #Nature {
+      background-color: bisque;
+      margin-top: 15px;
+      padding: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Image Of the Nature</h1>
+    <button id="btn">Fetch</button>
+    <div id="Nature">
+      <img src="" alt="Random Nature" id="Img">
+    </div>
+  </div>
+
+  <script>
+    let btn = document.getElementById("btn");
+    let img = document.getElementById("Img");
+
+    btn.addEventListener("click", async function () {
+      let response = await fetch("https://source.unsplash.com/random/800x600/?nature");
+      img.src = response.url;  // assign the image URL
+    });
+  </script>
+</body>
+</html>

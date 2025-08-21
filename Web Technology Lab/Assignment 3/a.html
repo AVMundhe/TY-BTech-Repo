@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        #table{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="table">
+        <button id="btn">Button</button>
+
+        <table id="tab" style="border:1px solid black; border-collapse:collapse;">
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>COl 3</th>
+            <th>COl 4</th>
+
+        </table>
+
+    </div>
+    <script>
+        let a = document.getElementById("btn");
+        let t = document.getElementById("tab");
+
+        let b = document.getElementById("userid");
+        let c = document.getElementById("id");
+        let d = document.getElementById("title");
+        let e = document.getElementById("complete");
+
+        a.addEventListener("click", async () => {
+            let p = await fetch("https://jsonplaceholder.typicode.com/todos");
+
+            let result = await p.json();
+
+            console.log(result);
+            console.log(typeof result);
+
+           let tr = document.createElement("tr");
+
+for (let key in result[0]) {
+  let td = document.createElement("td");
+  td.textContent = key;
+  tr.appendChild(td);
+}
+            tab.appendChild(tr);
+
+            for (let i = 0; i < result.length; i++) {
+                let k = document.createElement("tr");
+                for (let j in result[i]) {
+
+                    let m = document.createElement("td");
+
+                    m.textContent = result[i][j]
+                    k.append(m);
+                }
+                tab.appendChild(k);
+            }
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
